@@ -14,7 +14,7 @@ constructor(newmap, newarr){
 
         this.arr.push(a);
 
-        console.log(this.arr[this.arr.length-1] === a)
+        return this.arr[this.arr.length-1] === a;
     }
 
     remove = (a) => {
@@ -35,7 +35,7 @@ constructor(newmap, newarr){
 
         this.arr.pop();
 
-        console.log(this.arr[this.arr.length-1] !== a)
+        return this.arr[this.arr.length-1] !== a;
 
     }
 
@@ -45,20 +45,20 @@ constructor(newmap, newarr){
 
         let index = this.map.get(a) ?? -1;
 
-        console.log(index)
+        return index ?? -1;
 
     }
 
     findRandom = () => {
 
         let random = Math.floor(Math.random() * this.arr.length-1);
-        console.log(this.arr[random])
+        return this.arr[random];
     }
 
 
 }
 
-
+//TEST
 let test = new ds();
 let i = 30;
 while(i-- > 0){
