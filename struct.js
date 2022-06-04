@@ -45,14 +45,14 @@ constructor(newmap, newarr){
 
         let index = this.map.get(a) ?? -1;
 
-        return index ?? -1;
+        return index;
 
     }
 
     findRandom = () => {
 
         let random = Math.floor(Math.random() * this.arr.length-1);
-        return this.arr[random];
+        return this.arr[random] ?? -1;
     }
 
 
